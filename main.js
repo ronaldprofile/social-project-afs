@@ -6,7 +6,8 @@ const scrollReveal = ScrollReveal({
 });
 
 scrollReveal.reveal(
-  `#services .card,
+  `#home .text, #home .image,
+  #services .card,
   #social-networks .youtube,
   #social-networks .instagram,
   #social-networks .discord`,
