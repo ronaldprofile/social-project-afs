@@ -1,6 +1,6 @@
 const scrollReveal = ScrollReveal({
   origin: "top",
-  distance: "100px",
+  distance: "30px",
   duration: 700,
   reset: true
 });
@@ -8,8 +8,10 @@ const scrollReveal = ScrollReveal({
 scrollReveal.reveal(
   `#home .text, #home .image,
   #services .card,
+  #i-will-learn .card,
   #social-networks .youtube,
   #social-networks .instagram,
-  #social-networks .discord`,
+  #social-networks .discord,
+  footer .brand, footer .list`,
   { interval: 100 }
 );
