@@ -7,9 +7,15 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
-  color: #2e384d;
+  font: 400 1rem "DM Sans", sans-serif;
+  background: #fafafa;
+  color: #666666;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -25,26 +31,29 @@ body {
   }
 }
 
-body,
-input,
-textarea,
-button {
-  font: 400 1rem "Inter", sans-serif;
-}
-
 img {
   width: 100%;
   height: auto;
 }
 
+.title {
+  font: 700 2.5rem "Inter", sans-serif;
+  color: #2e384d;
+}
+
+.subtitle {
+  font: 700 1.875rem "Inter", sans-serif;
+  color: #2e384d;
+}
+
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + 4.5rem) 0;
 }
 
 .button {
   height: 3rem;
   padding: 1rem 2rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 5px;
   -webkit-transition: -webkit-filter 0.2s;
   transition: -webkit-filter 0.2s;
@@ -69,15 +78,17 @@ img {
   background: linear-gradient(270deg, rgba(211, 205, 244, 0.34), #776ab9);
 }
 
-/**  App **/
 .container {
-  height: 100vh;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 2.5rem 2rem;
 }
 
-.container header {
+header {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+header nav {
+  height: 4.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,7 +100,7 @@ img {
           justify-content: space-between;
 }
 
-.container header nav ul {
+header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,30 +110,30 @@ img {
   gap: 1.5rem;
 }
 
-.container header nav ul li a {
+header nav ul li a {
   position: relative;
   color: #666666;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-.container header nav ul li a::after {
+header nav ul li a::after {
   content: "";
   height: 2px;
   width: 0;
   position: absolute;
-  bottom: -1rem;
+  bottom: -1.5rem;
   left: 0;
   background-color: blue;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
 
-.container header nav ul li a:hover::after {
+header nav ul li a:hover::after {
   width: 100%;
 }
 
-.container main #home {
+main #home .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,10 +143,9 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 2rem;
 }
 
-.container main #home .text {
+main #home .container .text {
   max-width: 22.5rem;
   overflow: hidden;
   display: -webkit-box;
@@ -147,16 +157,12 @@ img {
           flex-direction: column;
 }
 
-.container main #home .text strong {
-  font-size: 2.25rem;
-}
-
-.container main #home .text p {
+main #home .container .text p {
   margin-top: 0.75rem;
   line-height: 1.5rem;
 }
 
-.container main #home .text > a {
+main #home .container .text > a {
   display: block;
   margin-top: 1.5rem;
   background-color: blue;
@@ -165,22 +171,23 @@ img {
   text-align: center;
 }
 
-.container main #home .image img {
+main #home .container .image img {
   max-width: 500px;
   border-radius: 5px;
 }
 
-.container main #services {
+main #services {
   text-align: center;
+  background-color: #fff;
 }
 
-.container main #services > strong {
-  font-size: 2.25rem;
-  font-weight: bold;
+main #services p {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
 }
 
-.container main #services .cards {
-  margin-top: 1.5rem;
+main #services .cards {
+  margin-top: 2.5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -188,7 +195,7 @@ img {
   gap: 1rem;
 }
 
-.container main #services .cards .card {
+main #services .cards .card {
   padding: 2.5rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,49 +213,99 @@ img {
   background-color: #fff;
   border-bottom: 4px solid blue;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
 }
 
-.container main #services .cards .card img {
+main #services .cards .card img {
   width: 50px;
   margin-bottom: 1.5rem;
 }
 
-.container main #services .cards .card strong {
+main #services .cards .card strong {
   margin-bottom: 0.75rem;
   font-size: 1.5rem;
 }
 
-.container main #social-networks {
+main #i-will-learn {
   text-align: center;
 }
 
-.container main #social-networks > strong {
-  font-size: 2.25rem;
-  font-weight: bold;
+main #i-will-learn p {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
 }
 
-.container main #social-networks .content {
+main #i-will-learn .container .cards {
+  margin-top: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+main #i-will-learn .container .cards .card {
+  padding: 3rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  border-bottom: 4px solid blue;
+}
+
+main #i-will-learn .container .cards .card img {
+  width: 50px;
+}
+
+main #i-will-learn .container .cards .card strong {
+  margin: 0.75rem 0;
+  font-size: 1.5rem;
+}
+
+main #social-networks {
+  text-align: center;
+}
+
+main #social-networks p {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+}
+
+main #social-networks .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.container main #social-networks .content .socials {
+main #social-networks .content .socials {
   margin-top: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
   gap: 1rem;
 }
 
-.container main #social-networks .content .socials div {
+main #social-networks .content .socials div {
   padding: 3rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,28 +323,90 @@ img {
   gap: 1rem;
   background-color: #e5e5e5;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
 }
 
-.container main #social-networks .content .socials div img {
+main #social-networks .content .socials div img {
   width: 50px;
 }
 
-.container main #social-networks .content .socials div a.youtube {
+main #social-networks .content .socials div a.youtube {
   background-color: #ff0000;
   color: #fff;
 }
 
-.container main #social-networks .content .socials div a.instagram {
+main #social-networks .content .socials div a.instagram {
   background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
   color: #fff;
 }
 
-.container main #social-networks .content .socials div a.discord {
+main #social-networks .content .socials div a.discord {
   background-color: #5c6bc0;
   color: #fff;
+}
+
+footer {
+  padding: 4.5rem;
+  background-color: #fff;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+footer .container .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.6rem;
+}
+
+footer .container .list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer .container .list ul li a {
+  color: inherit;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+footer .container .list ul li a:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+  text-decoration: underline;
 }
 /*# sourceMappingURL=styles.css.map */

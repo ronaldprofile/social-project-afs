@@ -1,3 +1,9 @@
+$body-font: "DM Sans", sans-serif;
+$title-font: "Inter", sans-serif;
+
+$title-font-size: 2.5rem;
+$subtitle-font-size: 1.875rem;
+
 $white: #fff;
 $text: #666666;
 $title: #2e384d;
@@ -13,7 +19,7 @@ $instagram-gradient: -webkit-linear-gradient(
   #bc1888 100%
 );
 
-$shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+$shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
 $border: 5px;
 
 $separator-1-gradient: linear-gradient(
