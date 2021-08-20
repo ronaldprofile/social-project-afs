@@ -1,0 +1,15 @@
+@import "./_variables.scss";
+
+@mixin Card() {
+  padding: 3rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $white;
+  box-shadow: $shadow;
+  border-radius: $border;
+  border-bottom: 4px solid blue;
+}
